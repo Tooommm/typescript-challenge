@@ -14,8 +14,12 @@ interface User {
 }
 
 const prettyPrintWilder = (users: User[]) => {
-  users.map((user: User) => {
-    console.log(`${user.name} is ${user.age} years old`);
+  users.map((user) => {
+    if (user.age) {
+      console.log(`${user.name} is ${user.age} years old`);
+    } else {
+      console.log(`${user.name} birthday ${user.birthday}`);
+    }
   });
 };
 

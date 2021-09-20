@@ -6,7 +6,12 @@ const hello = (name) => {
 console.log(hello(myName));
 const prettyPrintWilder = (users) => {
     users.map((user) => {
-        console.log(`${user.name} is ${user.age} years old`);
+        if (user.age) {
+            console.log(`${user.name} is ${user.age} years old`);
+        }
+        else {
+            console.log(`${user.name} birthday ${user.birthday}`);
+        }
     });
 };
 const wilders = [];
